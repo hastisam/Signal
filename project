@@ -1,0 +1,1122 @@
+%heatmap
+freqrange=[35 40];
+plvrareAD12=zeros(1,13);
+plvfrequentAD12=zeros(1,13);
+for j=1:13
+epoch=AD(j).epoch;
+odor=AD(j).odor;
+ADrareFz=epoch(1,:,odor==1);
+ADrareCz=epoch(2,:,odor==1);
+ADfrequentFz=epoch(1,:,odor==0);
+ADfrequentCz=epoch(2,:,odor==0);
+plvADrareAv=0;
+plvADfrequentAv=0;
+for i=1:size(ADrareCz,3)
+plvADrare=PLV(ADrareCz(1,:,i),ADrareFz(1,:,i),freqrange,200);
+plvADrareAv=plvADrareAv+plvADrare;
+end
+for i=1:size(ADfrequentCz,3)
+plvADfrequent=PLV(ADfrequentCz(1,:,i),ADfrequentFz(1,:,i),freqrange,200);
+plvADfrequentAv=plvADfrequent+plvADfrequentAv;
+end
+plvrareAD12(j)=plvADrareAv./size(ADrareCz,3);
+plvfrequentAD12(j)=plvADfrequentAv./size(ADfrequentCz,3);
+end
+
+freqrange=[35 40];
+plvrareAD13=zeros(1,13);
+plvfrequentAD13=zeros(1,13);
+for j=1:13
+epoch=AD(j).epoch;
+odor=AD(j).odor;
+ADrareFz=epoch(1,:,odor==1); 
+ADrareCz=epoch(3,:,odor==1);
+ADfrequentFz=epoch(1,:,odor==0);
+ADfrequentCz=epoch(3,:,odor==0);
+plvADrareAv=0;
+plvADfrequentAv=0;
+for i=1:size(ADrareCz,3)
+plvADrare=PLV(ADrareCz(1,:,i),ADrareFz(1,:,i),freqrange,200);
+plvADrareAv=plvADrareAv+plvADrare;
+end
+for i=1:size(ADfrequentCz,3)
+plvADfrequent=PLV(ADfrequentCz(1,:,i),ADfrequentFz(1,:,i),freqrange,200);
+plvADfrequentAv=plvADfrequent+plvADfrequentAv;
+end
+plvrareAD13(j)=plvADrareAv./size(ADrareCz,3);
+plvfrequentAD13(j)=plvADfrequentAv./size(ADfrequentCz,3);
+end
+
+
+freqrange=[35 40];
+plvrareAD14=zeros(1,13);
+plvfrequentAD14=zeros(1,13);
+for j=1:13
+epoch=AD(j).epoch;
+odor=AD(j).odor;
+ADrareFz=epoch(1,:,odor==1);
+ADrareCz=epoch(4,:,odor==1);
+ADfrequentFz=epoch(1,:,odor==0);
+ADfrequentCz=epoch(4,:,odor==0);
+plvADrareAv=0;
+plvADfrequentAv=0;
+for i=1:size(ADrareCz,3)
+plvADrare=PLV(ADrareCz(1,:,i),ADrareFz(1,:,i),freqrange,200);
+plvADrareAv=plvADrareAv+plvADrare;
+end
+for i=1:size(ADfrequentCz,3)
+plvADfrequent=PLV(ADfrequentCz(1,:,i),ADfrequentFz(1,:,i),freqrange,200);
+plvADfrequentAv=plvADfrequent+plvADfrequentAv;
+end
+plvrareAD14(j)=plvADrareAv./size(ADrareCz,3);
+plvfrequentAD14(j)=plvADfrequentAv./size(ADfrequentCz,3);
+end
+
+freqrange=[35 40];
+plvrareAD24=zeros(1,13);
+plvfrequentAD24=zeros(1,13);
+for j=1:13
+epoch=AD(j).epoch;
+odor=AD(j).odor;
+ADrareFz=epoch(2,:,odor==1);
+ADrareCz=epoch(4,:,odor==1);
+ADfrequentFz=epoch(2,:,odor==0);
+ADfrequentCz=epoch(4,:,odor==0);
+plvADrareAv=0;
+plvADfrequentAv=0;
+for i=1:size(ADrareCz,3)
+plvADrare=PLV(ADrareCz(1,:,i),ADrareFz(1,:,i),freqrange,200);
+plvADrareAv=plvADrareAv+plvADrare;
+end
+for i=1:size(ADfrequentCz,3)
+plvADfrequent=PLV(ADfrequentCz(1,:,i),ADfrequentFz(1,:,i),freqrange,200);
+plvADfrequentAv=plvADfrequent+plvADfrequentAv;
+end
+plvrareAD24(j)=plvADrareAv./size(ADrareCz,3);
+plvfrequentAD24(j)=plvADfrequentAv./size(ADfrequentCz,3);
+end
+
+freqrange=[35 40];
+plvrareAD34=zeros(1,13);
+plvfrequentAD34=zeros(1,13);
+for j=1:13
+epoch=AD(j).epoch;
+odor=AD(j).odor;
+ADrareFz=epoch(3,:,odor==1);
+ADrareCz=epoch(4,:,odor==1);
+ADfrequentFz=epoch(3,:,odor==0);
+ADfrequentCz=epoch(4,:,odor==0);
+plvADrareAv=0;
+plvADfrequentAv=0;
+for i=1:size(ADrareCz,3)
+plvADrare=PLV(ADrareCz(1,:,i),ADrareFz(1,:,i),freqrange,200);
+plvADrareAv=plvADrareAv+plvADrare;
+end
+for i=1:size(ADfrequentCz,3)
+plvADfrequent=PLV(ADfrequentCz(1,:,i),ADfrequentFz(1,:,i),freqrange,200);
+plvADfrequentAv=plvADfrequent+plvADfrequentAv;
+end
+plvrareAD34(j)=plvADrareAv./size(ADrareCz,3);
+plvfrequentAD34(j)=plvADfrequentAv./size(ADfrequentCz,3);
+end
+
+freqrange=[35 40];
+plvrareAD11=zeros(1,13);
+plvfrequentAD11=zeros(1,13);
+for j=1:13
+epoch=AD(j).epoch;
+odor=AD(j).odor;
+ADrareFz=epoch(1,:,odor==1);
+ADrareCz=epoch(1,:,odor==1);
+ADfrequentFz=epoch(1,:,odor==0);
+ADfrequentCz=epoch(1,:,odor==0);
+plvADrareAv=0;
+plvADfrequentAv=0;
+for i=1:size(ADrareCz,3)
+plvADrare=PLV(ADrareCz(1,:,i),ADrareFz(1,:,i),freqrange,200);
+plvADrareAv=plvADrareAv+plvADrare;
+end
+for i=1:size(ADfrequentCz,3)
+plvADfrequent=PLV(ADfrequentCz(1,:,i),ADfrequentFz(1,:,i),freqrange,200);
+plvADfrequentAv=plvADfrequent+plvADfrequentAv;
+end
+plvrareAD11(j)=plvADrareAv./size(ADrareCz,3);
+plvfrequentAD11(j)=plvADfrequentAv./size(ADfrequentCz,3);
+end
+
+freqrange=[35 40];
+plvrareAD22=zeros(1,13);
+plvfrequentAD22=zeros(1,13);
+for j=1:13
+epoch=AD(j).epoch;
+odor=AD(j).odor;
+ADrareFz=epoch(2,:,odor==1);
+ADrareCz=epoch(2,:,odor==1);
+ADfrequentFz=epoch(2,:,odor==0);
+ADfrequentCz=epoch(2,:,odor==0);
+plvADrareAv=0;
+plvADfrequentAv=0;
+for i=1:size(ADrareCz,3)
+plvADrare=PLV(ADrareCz(1,:,i),ADrareFz(1,:,i),freqrange,200);
+plvADrareAv=plvADrareAv+plvADrare;
+end
+for i=1:size(ADfrequentCz,3)
+plvADfrequent=PLV(ADfrequentCz(1,:,i),ADfrequentFz(1,:,i),freqrange,200);
+plvADfrequentAv=plvADfrequent+plvADfrequentAv;
+end
+plvrareAD22(j)=plvADrareAv./size(ADrareCz,3);
+plvfrequentAD22(j)=plvADfrequentAv./size(ADfrequentCz,3);
+end
+
+
+freqrange=[35 40];
+plvrareAD33=zeros(1,13);
+plvfrequentAD33=zeros(1,13);
+for j=1:13
+epoch=AD(j).epoch;
+odor=AD(j).odor;
+ADrareFz=epoch(3,:,odor==1);
+ADrareCz=epoch(3,:,odor==1);
+ADfrequentFz=epoch(3,:,odor==0);
+ADfrequentCz=epoch(3,:,odor==0);
+plvADrareAv=0;
+plvADfrequentAv=0;
+for i=1:size(ADrareCz,3)
+plvADrare=PLV(ADrareCz(1,:,i),ADrareFz(1,:,i),freqrange,200);
+plvADrareAv=plvADrareAv+plvADrare;
+end
+for i=1:size(ADfrequentCz,3)
+plvADfrequent=PLV(ADfrequentCz(1,:,i),ADfrequentFz(1,:,i),freqrange,200);
+plvADfrequentAv=plvADfrequent+plvADfrequentAv;
+end
+plvrareAD33(j)=plvADrareAv./size(ADrareCz,3);
+plvfrequentAD33(j)=plvADfrequentAv./size(ADfrequentCz,3);
+end
+
+freqrange=[35 40];
+plvrareAD44=zeros(1,13);
+plvfrequentAD44=zeros(1,13);
+for j=1:13
+epoch=AD(j).epoch;
+odor=AD(j).odor;
+ADrareFz=epoch(4,:,odor==1);
+ADrareCz=epoch(4,:,odor==1);
+ADfrequentFz=epoch(4,:,odor==0);
+ADfrequentCz=epoch(4,:,odor==0);
+plvADrareAv=0;
+plvADfrequentAv=0;
+for i=1:size(ADrareCz,3)
+plvADrare=PLV(ADrareCz(1,:,i),ADrareFz(1,:,i),freqrange,200);
+plvADrareAv=plvADrareAv+plvADrare;
+end
+for i=1:size(ADfrequentCz,3)
+plvADfrequent=PLV(ADfrequentCz(1,:,i),ADfrequentFz(1,:,i),freqrange,200);
+plvADfrequentAv=plvADfrequent+plvADfrequentAv;
+end
+plvrareAD44(j)=plvADrareAv./size(ADrareCz,3);
+plvfrequentAD44(j)=plvADfrequentAv./size(ADfrequentCz,3);
+end
+
+freqrange=[35 40];
+plvrareNormal12=zeros(1,15);
+plvfrequentNormal12=zeros(1,15);
+for j=1:15
+epoch=normal(j).epoch;
+odor=normal(j).odor;
+NormalrareFz=epoch(1,:,odor==1);
+NormalfrequentFz=epoch(1,:,odor==0);
+NormalfrequentCz=epoch(2,:,odor==0);
+NormalrareCz=epoch(2,:,odor==1);
+plvNormalrareAv=0;
+plvNormalfreaquentAv=0;
+for i=1:size(NormalrareCz,3)
+plvNormalrare=PLV(NormalrareCz(1,:,i),NormalrareFz(1,:,i),freqrange,200);
+plvNormalrareAv=plvNormalrareAv+plvNormalrare;
+end
+for i=1:size(NormalfrequentFz,3)
+plvNormalfreaquent=PLV(NormalfrequentCz(1,:,i),NormalfrequentFz(1,:,i),freqrange,200);
+plvNormalfreaquentAv=plvNormalfreaquent+plvNormalfreaquentAv;
+end
+plvrareNormal12(j)=plvNormalrareAv./size(NormalrareCz,3);
+plvfrequentNormal12(j)=plvNormalfreaquentAv./size(NormalfrequentFz,3);
+end
+
+
+freqrange=[35 40];
+plvrareNormal13=zeros(1,15);
+plvfrequentNormal13=zeros(1,15);
+for j=1:15
+epoch=normal(j).epoch;
+odor=normal(j).odor;
+NormalrareFz=epoch(1,:,odor==1);
+NormalfrequentFz=epoch(1,:,odor==0);
+NormalfrequentCz=epoch(3,:,odor==0);
+NormalrareCz=epoch(3,:,odor==1);
+plvNormalrareAv=0;
+plvNormalfreaquentAv=0;
+for i=1:size(NormalrareCz,3)
+plvNormalrare=PLV(NormalrareCz(1,:,i),NormalrareFz(1,:,i),freqrange,200);
+plvNormalrareAv=plvNormalrareAv+plvNormalrare;
+end
+for i=1:size(NormalfrequentFz,3)
+plvNormalfreaquent=PLV(NormalfrequentCz(1,:,i),NormalfrequentFz(1,:,i),freqrange,200);
+plvNormalfreaquentAv=plvNormalfreaquent+plvNormalfreaquentAv;
+end
+plvrareNormal13(j)=plvNormalrareAv./size(NormalrareCz,3);
+plvfrequentNormal13(j)=plvNormalfreaquentAv./size(NormalfrequentFz,3);
+end
+
+freqrange=[35 40];
+plvrareNormal14=zeros(1,15);
+plvfrequentNormal14=zeros(1,15);
+for j=1:15
+epoch=normal(j).epoch;
+odor=normal(j).odor;
+NormalrareFz=epoch(1,:,odor==1);
+NormalfrequentFz=epoch(1,:,odor==0);
+NormalfrequentCz=epoch(4,:,odor==0);
+NormalrareCz=epoch(4,:,odor==1);
+plvNormalrareAv=0;
+plvNormalfreaquentAv=0;
+for i=1:size(NormalrareCz,3)
+plvNormalrare=PLV(NormalrareCz(1,:,i),NormalrareFz(1,:,i),freqrange,200);
+plvNormalrareAv=plvNormalrareAv+plvNormalrare;
+end
+for i=1:size(NormalfrequentFz,3)
+plvNormalfreaquent=PLV(NormalfrequentCz(1,:,i),NormalfrequentFz(1,:,i),freqrange,200);
+plvNormalfreaquentAv=plvNormalfreaquent+plvNormalfreaquentAv;
+end
+plvrareNormal14(j)=plvNormalrareAv./size(NormalrareCz,3);
+plvfrequentNormal14(j)=plvNormalfreaquentAv./size(NormalfrequentFz,3);
+end
+
+freqrange=[35 40];
+plvrareNormal23=zeros(1,15);
+plvfrequentNormal23=zeros(1,15);
+for j=1:15
+epoch=normal(j).epoch;
+odor=normal(j).odor;
+NormalrareFz=epoch(2,:,odor==1);
+NormalfrequentFz=epoch(2,:,odor==0);
+NormalfrequentCz=epoch(3,:,odor==0);
+NormalrareCz=epoch(3,:,odor==1);
+plvNormalrareAv=0;
+plvNormalfreaquentAv=0;
+for i=1:size(NormalrareCz,3)
+plvNormalrare=PLV(NormalrareCz(1,:,i),NormalrareFz(1,:,i),freqrange,200);
+plvNormalrareAv=plvNormalrareAv+plvNormalrare;
+end
+for i=1:size(NormalfrequentFz,3)
+plvNormalfreaquent=PLV(NormalfrequentCz(1,:,i),NormalfrequentFz(1,:,i),freqrange,200);
+plvNormalfreaquentAv=plvNormalfreaquent+plvNormalfreaquentAv;
+end
+plvrareNormal23(j)=plvNormalrareAv./size(NormalrareCz,3);
+plvfrequentNormal23(j)=plvNormalfreaquentAv./size(NormalfrequentFz,3);
+end
+
+freqrange=[35 40];
+plvrareNormal24=zeros(1,15);
+plvfrequentNormal24=zeros(1,15);
+for j=1:15
+epoch=normal(j).epoch;
+odor=normal(j).odor;
+NormalrareFz=epoch(2,:,odor==1);
+NormalfrequentFz=epoch(2,:,odor==0);
+NormalfrequentCz=epoch(4,:,odor==0);
+NormalrareCz=epoch(4,:,odor==1);
+plvNormalrareAv=0;
+plvNormalfreaquentAv=0;
+for i=1:size(NormalrareCz,3)
+plvNormalrare=PLV(NormalrareCz(1,:,i),NormalrareFz(1,:,i),freqrange,200);
+plvNormalrareAv=plvNormalrareAv+plvNormalrare;
+end
+for i=1:size(NormalfrequentFz,3)
+plvNormalfreaquent=PLV(NormalfrequentCz(1,:,i),NormalfrequentFz(1,:,i),freqrange,200);
+plvNormalfreaquentAv=plvNormalfreaquent+plvNormalfreaquentAv;
+end
+plvrareNormal24(j)=plvNormalrareAv./size(NormalrareCz,3);
+plvfrequentNormal24(j)=plvNormalfreaquentAv./size(NormalfrequentFz,3);
+end
+
+freqrange=[35 40];
+plvrareNormal34=zeros(1,15);
+plvfrequentNormal34=zeros(1,15);
+for j=1:15
+epoch=normal(j).epoch;
+odor=normal(j).odor;
+NormalrareFz=epoch(3,:,odor==1);
+NormalfrequentFz=epoch(3,:,odor==0);
+NormalfrequentCz=epoch(4,:,odor==0);
+NormalrareCz=epoch(4,:,odor==1);
+plvNormalrareAv=0;
+plvNormalfreaquentAv=0;
+for i=1:size(NormalrareCz,3)
+plvNormalrare=PLV(NormalrareCz(1,:,i),NormalrareFz(1,:,i),freqrange,200);
+plvNormalrareAv=plvNormalrareAv+plvNormalrare;
+end
+for i=1:size(NormalfrequentFz,3)
+plvNormalfreaquent=PLV(NormalfrequentCz(1,:,i),NormalfrequentFz(1,:,i),freqrange,200);
+plvNormalfreaquentAv=plvNormalfreaquent+plvNormalfreaquentAv;
+end
+plvrareNormal34(j)=plvNormalrareAv./size(NormalrareCz,3);
+plvfrequentNormal34(j)=plvNormalfreaquentAv./size(NormalfrequentFz,3);
+end
+
+freqrange=[35 40];
+plvrareAD23=zeros(1,13);
+plvfrequentAD23=zeros(1,13);
+for j=1:13
+epoch=AD(j).epoch;
+odor=AD(j).odor;
+ADrareFz=epoch(2,:,odor==1);
+ADrareCz=epoch(3,:,odor==1);
+ADfrequentFz=epoch(2,:,odor==0);
+ADfrequentCz=epoch(3,:,odor==0);
+plvADrareAv=0;
+plvADfrequentAv=0;
+for i=1:size(ADrareCz,3)
+plvADrare=PLV(ADrareCz(1,:,i),ADrareFz(1,:,i),freqrange,200);
+plvADrareAv=plvADrareAv+plvADrare;
+end
+for i=1:size(ADfrequentCz,3)
+plvADfrequent=PLV(ADfrequentCz(1,:,i),ADfrequentFz(1,:,i),freqrange,200);
+plvADfrequentAv=plvADfrequent+plvADfrequentAv;
+end
+plvrareAD23(j)=plvADrareAv./size(ADrareCz,3);
+plvfrequentAD23(j)=plvADfrequentAv./size(ADfrequentCz,3);
+end
+
+
+freqrange=[35 40];
+plvrareNormal23=zeros(1,15);
+plvfrequentNormal23=zeros(1,15);
+for j=1:15
+epoch=normal(j).epoch;
+odor=normal(j).odor;
+NormalrareFz=epoch(2,:,odor==1);
+NormalfrequentFz=epoch(2,:,odor==0);
+NormalfrequentCz=epoch(3,:,odor==0);
+NormalrareCz=epoch(3,:,odor==1);
+plvNormalrareAv=0;
+plvNormalfreaquentAv=0;
+for i=1:size(NormalrareCz,3)
+plvNormalrare=PLV(NormalrareCz(1,:,i),NormalrareFz(1,:,i),freqrange,200);
+plvNormalrareAv=plvNormalrareAv+plvNormalrare;
+end
+for i=1:size(NormalfrequentFz,3)
+plvNormalfreaquent=PLV(NormalfrequentCz(1,:,i),NormalfrequentFz(1,:,i),freqrange,200);
+plvNormalfreaquentAv=plvNormalfreaquent+plvNormalfreaquentAv;
+end
+plvrareNormal23(j)=plvNormalrareAv./size(NormalrareCz,3);
+plvfrequentNormal23(j)=plvNormalfreaquentAv./size(NormalfrequentFz,3);
+end
+
+freqrange=[35 40];
+plvrareNormal11=zeros(1,15);
+plvfrequentNormal11=zeros(1,15);
+for j=1:15
+epoch=normal(j).epoch;
+odor=normal(j).odor;
+NormalrareFz=epoch(1,:,odor==1);
+NormalfrequentFz=epoch(1,:,odor==0);
+NormalfrequentCz=epoch(1,:,odor==0);
+NormalrareCz=epoch(1,:,odor==1);
+plvNormalrareAv=0;
+plvNormalfreaquentAv=0;
+for i=1:size(NormalrareCz,3)
+plvNormalrare=PLV(NormalrareCz(1,:,i),NormalrareFz(1,:,i),freqrange,200);
+plvNormalrareAv=plvNormalrareAv+plvNormalrare;
+end
+for i=1:size(NormalfrequentFz,3)
+plvNormalfreaquent=PLV(NormalfrequentCz(1,:,i),NormalfrequentFz(1,:,i),freqrange,200);
+plvNormalfreaquentAv=plvNormalfreaquent+plvNormalfreaquentAv;
+end
+plvrareNormal11(j)=plvNormalrareAv./size(NormalrareCz,3);
+plvfrequentNormal11(j)=plvNormalfreaquentAv./size(NormalfrequentFz,3);
+end
+
+freqrange=[35 40];
+plvrareNormal22=zeros(1,15);
+plvfrequentNormal22=zeros(1,15);
+for j=1:15
+epoch=normal(j).epoch;
+odor=normal(j).odor;
+NormalrareFz=epoch(2,:,odor==1);
+NormalfrequentFz=epoch(2,:,odor==0);
+NormalfrequentCz=epoch(2,:,odor==0);
+NormalrareCz=epoch(2,:,odor==1);
+plvNormalrareAv=0;
+plvNormalfreaquentAv=0;
+for i=1:size(NormalrareCz,3)
+plvNormalrare=PLV(NormalrareCz(1,:,i),NormalrareFz(1,:,i),freqrange,200);
+plvNormalrareAv=plvNormalrareAv+plvNormalrare;
+end
+for i=1:size(NormalfrequentFz,3)
+plvNormalfreaquent=PLV(NormalfrequentCz(1,:,i),NormalfrequentFz(1,:,i),freqrange,200);
+plvNormalfreaquentAv=plvNormalfreaquent+plvNormalfreaquentAv;
+end
+plvrareNormal22(j)=plvNormalrareAv./size(NormalrareCz,3);
+plvfrequentNormal22(j)=plvNormalfreaquentAv./size(NormalfrequentFz,3);
+end
+
+freqrange=[35 40];
+plvrareNormal33=zeros(1,15);
+plvfrequentNormal33=zeros(1,15);
+for j=1:15
+epoch=normal(j).epoch;
+odor=normal(j).odor;
+NormalrareFz=epoch(3,:,odor==1);
+NormalfrequentFz=epoch(3,:,odor==0);
+NormalfrequentCz=epoch(3,:,odor==0);
+NormalrareCz=epoch(3,:,odor==1);
+plvNormalrareAv=0;
+plvNormalfreaquentAv=0;
+for i=1:size(NormalrareCz,3)
+plvNormalrare=PLV(NormalrareCz(1,:,i),NormalrareFz(1,:,i),freqrange,200);
+plvNormalrareAv=plvNormalrareAv+plvNormalrare;
+end
+for i=1:size(NormalfrequentFz,3)
+plvNormalfreaquent=PLV(NormalfrequentCz(1,:,i),NormalfrequentFz(1,:,i),freqrange,200);
+plvNormalfreaquentAv=plvNormalfreaquent+plvNormalfreaquentAv;
+end
+plvrareNormal33(j)=plvNormalrareAv./size(NormalrareCz,3);
+plvfrequentNormal33(j)=plvNormalfreaquentAv./size(NormalfrequentFz,3);
+end
+
+freqrange=[35 40];
+plvrareNormal44=zeros(1,15);
+plvfrequentNormal44=zeros(1,15);
+for j=1:15
+epoch=normal(j).epoch;
+odor=normal(j).odor;
+NormalrareFz=epoch(4,:,odor==1);
+NormalfrequentFz=epoch(4,:,odor==0);
+NormalfrequentCz=epoch(4,:,odor==0);
+NormalrareCz=epoch(4,:,odor==1);
+plvNormalrareAv=0;
+plvNormalfreaquentAv=0;
+for i=1:size(NormalrareCz,3)
+plvNormalrare=PLV(NormalrareCz(1,:,i),NormalrareFz(1,:,i),freqrange,200);
+plvNormalrareAv=plvNormalrareAv+plvNormalrare;
+end
+for i=1:size(NormalfrequentFz,3)
+plvNormalfreaquent=PLV(NormalfrequentCz(1,:,i),NormalfrequentFz(1,:,i),freqrange,200);
+plvNormalfreaquentAv=plvNormalfreaquent+plvNormalfreaquentAv;
+end
+plvrareNormal44(j)=plvNormalrareAv./size(NormalrareCz,3);
+plvfrequentNormal44(j)=plvNormalfreaquentAv./size(NormalfrequentFz,3);
+end
+
+%heatmap
+freqrange=[35 40];
+plvrareMCI12=zeros(1,13);
+plvfrequentMCI12=zeros(1,13);
+for j=1:13
+epoch=MCI(j).epoch;
+odor=MCI(j).odor;
+MCIrareFz=epoch(1,:,odor==1);
+MCIrareCz=epoch(2,:,odor==1);
+MCIfrequentFz=epoch(1,:,odor==0);
+MCIfrequentCz=epoch(2,:,odor==0);
+plvMCIrareAv=0;
+plvMCIfrequentAv=0;
+for i=1:size(MCIrareCz,3)
+plvMCIrare=PLV(MCIrareCz(1,:,i),MCIrareFz(1,:,i),freqrange,200);
+plvMCIrareAv=plvMCIrareAv+plvMCIrare;
+end
+for i=1:size(MCIfrequentCz,3)
+plvMCIfrequent=PLV(MCIfrequentCz(1,:,i),MCIfrequentFz(1,:,i),freqrange,200);
+plvMCIfrequentAv=plvMCIfrequent+plvMCIfrequentAv;
+end
+plvrareMCI12(j)=plvMCIrareAv./size(MCIrareCz,3);
+plvfrequentMCI12(j)=plvMCIfrequentAv./size(MCIfrequentCz,3);
+end
+
+freqrange=[35 40];
+plvrareMCI13=zeros(1,13);
+plvfrequentMCI13=zeros(1,13);
+for j=1:13
+epoch=MCI(j).epoch;
+odor=MCI(j).odor;
+MCIrareFz=epoch(1,:,odor==1); 
+MCIrareCz=epoch(3,:,odor==1);
+MCIfrequentFz=epoch(1,:,odor==0);
+MCIfrequentCz=epoch(3,:,odor==0);
+plvMCIrareAv=0;
+plvMCIfrequentAv=0;
+for i=1:size(MCIrareCz,3)
+plvMCIrare=PLV(MCIrareCz(1,:,i),MCIrareFz(1,:,i),freqrange,200);
+plvMCIrareAv=plvMCIrareAv+plvMCIrare;
+end
+for i=1:size(MCIfrequentCz,3)
+plvMCIfrequent=PLV(MCIfrequentCz(1,:,i),MCIfrequentFz(1,:,i),freqrange,200);
+plvMCIfrequentAv=plvMCIfrequent+plvMCIfrequentAv;
+end
+plvrareMCI13(j)=plvMCIrareAv./size(MCIrareCz,3);
+plvfrequentMCI13(j)=plvMCIfrequentAv./size(MCIfrequentCz,3);
+end
+
+
+freqrange=[35 40];
+plvrareMCI14=zeros(1,13);
+plvfrequentMCI14=zeros(1,13);
+for j=1:13
+epoch=MCI(j).epoch;
+odor=MCI(j).odor;
+MCIrareFz=epoch(1,:,odor==1);
+MCIrareCz=epoch(4,:,odor==1);
+MCIfrequentFz=epoch(1,:,odor==0);
+MCIfrequentCz=epoch(4,:,odor==0);
+plvMCIrareAv=0;
+plvMCIfrequentAv=0;
+for i=1:size(MCIrareCz,3)
+plvMCIrare=PLV(MCIrareCz(1,:,i),MCIrareFz(1,:,i),freqrange,200);
+plvMCIrareAv=plvMCIrareAv+plvMCIrare;
+end
+for i=1:size(MCIfrequentCz,3)
+plvMCIfrequent=PLV(MCIfrequentCz(1,:,i),MCIfrequentFz(1,:,i),freqrange,200);
+plvMCIfrequentAv=plvMCIfrequent+plvMCIfrequentAv;
+end
+plvrareMCI14(j)=plvMCIrareAv./size(MCIrareCz,3);
+plvfrequentMCI14(j)=plvMCIfrequentAv./size(MCIfrequentCz,3);
+end
+
+freqrange=[35 40];
+plvrareMCI24=zeros(1,13);
+plvfrequentMCI24=zeros(1,13);
+for j=1:13
+epoch=MCI(j).epoch;
+odor=MCI(j).odor;
+MCIrareFz=epoch(2,:,odor==1);
+MCIrareCz=epoch(4,:,odor==1);
+MCIfrequentFz=epoch(2,:,odor==0);
+MCIfrequentCz=epoch(4,:,odor==0);
+plvMCIrareAv=0;
+plvMCIfrequentAv=0;
+for i=1:size(MCIrareCz,3)
+plvMCIrare=PLV(MCIrareCz(1,:,i),MCIrareFz(1,:,i),freqrange,200);
+plvMCIrareAv=plvMCIrareAv+plvMCIrare;
+end
+for i=1:size(MCIfrequentCz,3)
+plvMCIfrequent=PLV(MCIfrequentCz(1,:,i),MCIfrequentFz(1,:,i),freqrange,200);
+plvMCIfrequentAv=plvMCIfrequent+plvMCIfrequentAv;
+end
+plvrareMCI24(j)=plvMCIrareAv./size(MCIrareCz,3);
+plvfrequentMCI24(j)=plvMCIfrequentAv./size(MCIfrequentCz,3);
+end
+
+freqrange=[35 40];
+plvrareMCI34=zeros(1,13);
+plvfrequentMCI34=zeros(1,13);
+for j=1:13
+epoch=MCI(j).epoch;
+odor=MCI(j).odor;
+MCIrareFz=epoch(3,:,odor==1);
+MCIrareCz=epoch(4,:,odor==1);
+MCIfrequentFz=epoch(3,:,odor==0);
+MCIfrequentCz=epoch(4,:,odor==0);
+plvMCIrareAv=0;
+plvMCIfrequentAv=0;
+for i=1:size(MCIrareCz,3)
+plvMCIrare=PLV(MCIrareCz(1,:,i),MCIrareFz(1,:,i),freqrange,200);
+plvMCIrareAv=plvMCIrareAv+plvMCIrare;
+end
+for i=1:size(MCIfrequentCz,3)
+plvMCIfrequent=PLV(MCIfrequentCz(1,:,i),MCIfrequentFz(1,:,i),freqrange,200);
+plvMCIfrequentAv=plvMCIfrequent+plvMCIfrequentAv;
+end
+plvrareMCI34(j)=plvMCIrareAv./size(MCIrareCz,3);
+plvfrequentMCI34(j)=plvMCIfrequentAv./size(MCIfrequentCz,3);
+end
+
+freqrange=[35 40];
+plvrareMCI11=zeros(1,13);
+plvfrequentMCI11=zeros(1,13);
+for j=1:13
+epoch=MCI(j).epoch;
+odor=MCI(j).odor;
+MCIrareFz=epoch(1,:,odor==1);
+MCIrareCz=epoch(1,:,odor==1);
+MCIfrequentFz=epoch(1,:,odor==0);
+MCIfrequentCz=epoch(1,:,odor==0);
+plvMCIrareAv=0;
+plvMCIfrequentAv=0;
+for i=1:size(MCIrareCz,3)
+plvMCIrare=PLV(MCIrareCz(1,:,i),MCIrareFz(1,:,i),freqrange,200);
+plvMCIrareAv=plvMCIrareAv+plvMCIrare;
+end
+for i=1:size(MCIfrequentCz,3)
+plvMCIfrequent=PLV(MCIfrequentCz(1,:,i),MCIfrequentFz(1,:,i),freqrange,200);
+plvMCIfrequentAv=plvMCIfrequent+plvMCIfrequentAv;
+end
+plvrareMCI11(j)=plvMCIrareAv./size(MCIrareCz,3);
+plvfrequentMCI11(j)=plvMCIfrequentAv./size(MCIfrequentCz,3);
+end
+
+freqrange=[35 40];
+plvrareMCI22=zeros(1,13);
+plvfrequentMCI22=zeros(1,13);
+for j=1:13
+epoch=MCI(j).epoch;
+odor=MCI(j).odor;
+MCIrareFz=epoch(2,:,odor==1);
+MCIrareCz=epoch(2,:,odor==1);
+MCIfrequentFz=epoch(2,:,odor==0);
+MCIfrequentCz=epoch(2,:,odor==0);
+plvMCIrareAv=0;
+plvMCIfrequentAv=0;
+for i=1:size(MCIrareCz,3)
+plvMCIrare=PLV(MCIrareCz(1,:,i),MCIrareFz(1,:,i),freqrange,200);
+plvMCIrareAv=plvMCIrareAv+plvMCIrare;
+end
+for i=1:size(MCIfrequentCz,3)
+plvMCIfrequent=PLV(MCIfrequentCz(1,:,i),MCIfrequentFz(1,:,i),freqrange,200);
+plvMCIfrequentAv=plvMCIfrequent+plvMCIfrequentAv;
+end
+plvrareMCI22(j)=plvMCIrareAv./size(MCIrareCz,3);
+plvfrequentMCI22(j)=plvMCIfrequentAv./size(MCIfrequentCz,3);
+end
+
+
+freqrange=[35 40];
+plvrareMCI33=zeros(1,13);
+plvfrequentMCI33=zeros(1,13);
+for j=1:13
+epoch=MCI(j).epoch;
+odor=MCI(j).odor;
+MCIrareFz=epoch(3,:,odor==1);
+MCIrareCz=epoch(3,:,odor==1);
+MCIfrequentFz=epoch(3,:,odor==0);
+MCIfrequentCz=epoch(3,:,odor==0);
+plvMCIrareAv=0;
+plvMCIfrequentAv=0;
+for i=1:size(MCIrareCz,3)
+plvMCIrare=PLV(MCIrareCz(1,:,i),MCIrareFz(1,:,i),freqrange,200);
+plvMCIrareAv=plvMCIrareAv+plvMCIrare;
+end
+for i=1:size(MCIfrequentCz,3)
+plvMCIfrequent=PLV(MCIfrequentCz(1,:,i),MCIfrequentFz(1,:,i),freqrange,200);
+plvMCIfrequentAv=plvMCIfrequent+plvMCIfrequentAv;
+end
+plvrareMCI33(j)=plvMCIrareAv./size(MCIrareCz,3);
+plvfrequentMCI33(j)=plvMCIfrequentAv./size(MCIfrequentCz,3);
+end
+
+freqrange=[35 40];
+plvrareMCI44=zeros(1,13);
+plvfrequentMCI44=zeros(1,13);
+for j=1:13
+epoch=MCI(j).epoch;
+odor=MCI(j).odor;
+MCIrareFz=epoch(4,:,odor==1);
+MCIrareCz=epoch(4,:,odor==1);
+MCIfrequentFz=epoch(4,:,odor==0);
+MCIfrequentCz=epoch(4,:,odor==0);
+plvMCIrareAv=0;
+plvMCIfrequentAv=0;
+for i=1:size(MCIrareCz,3)
+plvMCIrare=PLV(MCIrareCz(1,:,i),MCIrareFz(1,:,i),freqrange,200);
+plvMCIrareAv=plvMCIrareAv+plvMCIrare;
+end
+for i=1:size(MCIfrequentCz,3)
+plvMCIfrequent=PLV(MCIfrequentCz(1,:,i),MCIfrequentFz(1,:,i),freqrange,200);
+plvMCIfrequentAv=plvMCIfrequent+plvMCIfrequentAv;
+end
+plvrareMCI44(j)=plvMCIrareAv./size(MCIrareCz,3);
+plvfrequentMCI44(j)=plvMCIfrequentAv./size(MCIfrequentCz,3);
+end
+
+freqrange=[35 40];
+plvrareMCI23=zeros(1,13);
+plvfrequentMCI23=zeros(1,13);
+for j=1:13
+epoch=MCI(j).epoch;
+odor=MCI(j).odor;
+MCIrareFz=epoch(2,:,odor==1);
+MCIrareCz=epoch(3,:,odor==1);
+MCIfrequentFz=epoch(2,:,odor==0);
+MCIfrequentCz=epoch(3,:,odor==0);
+plvMCIrareAv=0;
+plvMCIfrequentAv=0;
+for i=1:size(MCIrareCz,3)
+plvMCIrare=PLV(MCIrareCz(1,:,i),MCIrareFz(1,:,i),freqrange,200);
+plvMCIrareAv=plvMCIrareAv+plvMCIrare;
+end
+for i=1:size(MCIfrequentCz,3)
+plvMCIfrequent=PLV(MCIfrequentCz(1,:,i),MCIfrequentFz(1,:,i),freqrange,200);
+plvMCIfrequentAv=plvMCIfrequent+plvMCIfrequentAv;
+end
+plvrareMCI23(j)=plvMCIrareAv./size(MCIrareCz,3);
+plvfrequentMCI23(j)=plvMCIfrequentAv./size(MCIfrequentCz,3);
+end
+
+%tablenormalrare=table(plvrareNormal11,plvrareNormal44,plvrarenormal22,plvrarenormal33,plvrarenormal12,plvrareNormal13,plvrareNormal14,plvrareNormal23,plvrareNormal24,plvrareNormal34);
+normalrareheatmap=[mean(plvrareNormal11),mean(plvrareNormal12),mean(plvrareNormal13),mean(plvrareNormal14);mean(plvrareNormal12)...
+    ,mean(plvrareNormal22),mean(plvrareNormal23),mean(plvrareNormal24);mean(plvrareNormal13),mean(plvrareNormal23),mean(plvrareNormal33)...
+    ,mean(plvrareNormal34);mean(plvrareNormal14),mean(plvrareNormal24),mean(plvrareNormal34),mean(plvrareNormal44)];
+heatmap(normalrareheatmap);
+
+normalfrequentheatmap=[mean(plvfrequentNormal11),mean(plvfrequentNormal12),mean(plvfrequentNormal13),mean(plvfrequentNormal14);mean(plvfrequentNormal11)...
+    ,mean(plvrfrequentNormal22),mean(plvrfrequentNormal23),mean(plvfrequentNormal24);mean(plvrfrequentNormal13),mean(plvfrequentNormal23),mean(plvfrequentNormal33)...
+    ,mean(plvrfrequentNormal34);mean(plvfrequentNormal14),mean(plvfrequentNormal24),mean(plvfrequentNormal34),mean(plvfrequentNormal44)];
+heatmap(normalfrequentheatmap);
+
+ADrareheatmap=[mean(plvrareAD11) mean(plvrareAD12) mean(plvrareAD13) mean(plvrareAD14);mean(plvrareAD12)...
+     mean(plvrareAD22) mean(plvrareAD23) mean(plvrareAD24);mean(plvrareAD13) mean(plvrareAD23) mean(plvrareAD33)...
+     mean(plvrareAD34);mean(plvrareAD14) mean(plvrareAD24) mean(plvrareAD34) mean(plvrareAD44)];
+heatmap(ADrareheatmap)
+
+ADfrequentheatmap=[mean(plvfrequentAD11),mean(plvfrequentAD12),mean(plvfrequentAD13),mean(plvfrequentAD14);mean(plvfrequentAD12)...
+    ,mean(plvfrequentAD22),mean(plvfrequentAD23),mean(plvfrequentAD24);mean(plvfrequentAD13),mean(plvfrequentAD23),mean(plvfrequentAD33)...
+    ,mean(plvfrequentAD34);mean(plvfrequentAD14),mean(plvfrequentAD24),mean(plvfrequentAD34),mean(plvfrequentAD44)];
+heatmap(ADfrequentheatmap);
+
+MCIrareheatmap=[mean(plvrareMCI11) mean(plvrareMCI12) mean(plvrareMCI13) mean(plvrareMCI14);mean(plvrareMCI12)...
+     mean(plvrareMCI22) mean(plvrareMCI23) mean(plvrareMCI24);mean(plvrareMCI13) mean(plvrareMCI23) mean(plvrareMCI33)...
+     mean(plvrareMCI34);mean(plvrareMCI14) mean(plvrareMCI24) mean(plvrareMCI34) mean(plvrareMCI44)];
+heatmap(MCIrareheatmap)
+
+MCIrareheatmap=[mean(plvrareMCI11) mean(plvrareMCI12) mean(plvrareMCI13) mean(plvrareMCI14);mean(plvrareMCI12)...
+     mean(plvrareMCI22) mean(plvrareMCI23) mean(plvrareMCI24);mean(plvrareMCI13) mean(plvrareMCI23) mean(plvrareMCI33)...
+     mean(plvrareMCI34);mean(plvrareMCI14) mean(plvrareMCI24) mean(plvrareMCI34) mean(plvrareMCI44)];
+heatmap(MCIrareheatmap)
+
+function [ plv ] = PLV( sig1,sig2,frqrange,fsamp)
+% Compute the Phase Locking Value between two signals across trials, according to Lachaux, 
+% Rodriguez, Martinerie, and Varela (1999). The PLV value ranges from 0, indicating random 
+% phase differences, to 1 indicating a fixed phase difference. 
+% phase_sig1 and phase_sig2 should be the phase values of the signals in radians, arranged as
+% Samples x Trials. These can bed
+% computed using the Wavelet or Hilbert transform, for example:
+% phase_sig = angle(hilbert(BPS)); 
+% Where BPS is the signal after band-pass filtering around the frequency range of interest. 
+sig_temp1=bandpass(sig1,frqrange,fsamp);
+sig_temp2=bandpass(sig2,frqrange,fsamp);
+analytic_sig1=hilbert(sig_temp1);
+analytic_sig2=hilbert(sig_temp2);
+phase_sig1=angle(analytic_sig1);
+phase_sig2=angle(analytic_sig2);
+[~, Ntrials] = size(phase_sig1);
+% compute PLV
+e = exp(1i*(phase_sig1 - phase_sig2));
+plv = abs(sum(e,2)) / Ntrials;
+end
+array=table2array(subject1);
+sub1=transpose(array);
+sub1(20,:)=[];
+array2=table2array(subject2);
+sub2=transpose(array2);
+sub2(20,:)=[];
+
+
+%4.1
+freqrange=[35 40];
+plvrareAD=zeros(1,13);
+plvfrequentAD=zeros(1,13);
+for j=1:13
+epoch=AD(j).epoch;
+% Fz=epoch(2,:,:);
+% Cz=epoch(3,:,:);
+odor=AD(j).odor;
+% A=ones(1,size(Fz,2)).*(odor);
+% B=ones(1,size(Fz,2)).*(~odor);
+% ADrareFz=Fz.*A;
+% ADrareCz=Cz.*A;
+% ADfrequentFz=Fz.*B;
+% ADfrequentCz=Cz.*B;
+ADrareFz=epoch(2,:,odor==1);
+ADrareCz=epoch(3,:,odor==1);
+ADfrequentFz=epoch(2,:,odor==0);
+ADfrequentCz=epoch(3,:,odor==0);
+plvADrareAv=0;
+plvADfrequentAv=0;
+for i=1:size(ADrareCz,3)
+plvADrare=PLV(ADrareCz(1,:,i),ADrareFz(1,:,i),freqrange,200);
+plvADrareAv=plvADrareAv+plvADrare;
+end
+for i=1:size(ADfrequentCz,3)
+plvADfrequent=PLV(ADfrequentCz(1,:,i),ADfrequentFz(1,:,i),freqrange,200);
+plvADfrequentAv=plvADfrequent+plvADfrequentAv;
+end
+plvrareAD(j)=plvADrareAv./size(ADrareCz,3);
+plvfrequentAD(j)=plvADfrequentAv./size(ADfrequentCz,3);
+end
+boxplot(plvfrequentAD);
+title('frequent AD')
+figure
+boxplot(plvrareAD);
+title("rare AD")
+
+freqrange=[35 40];
+plvrareNormal=zeros(1,15);
+plvfrequentNormal=zeros(1,15);
+for j=1:15
+epoch=normal(j).epoch;
+% Fz=epoch(2,:,:);
+% Cz=epoch(3,:,:);
+odor=normal(j).odor;
+% A=ones(1,size(Fz,2)).*(odor);
+% B=ones(1,size(Fz,2)).*(~odor);
+% NormalrareFz=Fz.*A;
+% NormalrareCz=Cz.*A;
+% NormalfrequentFz=Fz.*B;
+% NormalfrequentCz=Cz.*B;
+NormalrareFz=epoch(2,:,odor==1);
+NormalfrequentFz=epoch(2,:,odor==0);
+NormalfrequentCz=epoch(3,:,odor==0);
+NormalrareCz=epoch(3,:,odor==1);
+plvNormalrareAv=0;
+plvNormalfreaquentAv=0;
+for i=1:size(NormalrareCz,3)
+plvNormalrare=PLV(NormalrareCz(1,:,i),NormalrareFz(1,:,i),freqrange,200);
+plvNormalrareAv=plvNormalrareAv+plvNormalrare;
+end
+for i=1:size(NormalfrequentFz,3)
+plvNormalfreaquent=PLV(NormalfrequentCz(1,:,i),NormalfrequentFz(1,:,i),freqrange,200);
+plvNormalfreaquentAv=plvNormalfreaquent+plvNormalfreaquentAv;
+end
+plvrareNormal(j)=plvNormalrareAv./size(NormalrareCz,3);
+plvfrequentNormal(j)=plvNormalfreaquentAv./size(NormalfrequentFz,3);
+end
+boxplot(plvfrequentNormal);
+title('frequent Normal')
+figure
+boxplot(plvrareNormal);
+title("rare Normal")
+
+[muADrare,sADrare]=normfit(plvrareAD);
+x=muADrare-3*sADrare:0.01:muADrare+3*sADrare;
+y1=normpdf(x,muADrare,sADrare);
+plot(x,y1);
+[muADfrequent,sADfrequent]=normfit(plvfrequentAD);
+x=muADfrequent-3*sADfrequent:0.01:muADfrequent+3*sADfrequent;
+y2=normpdf(x,muADfrequent,sADfrequent);
+plot(x,y2);
+[muNormalrare,sNormalrare]=normfit(plvrareNormal);
+x=muNormalrare-3*sNormalrare:0.01:muNormalrare+3*sNormalrare;
+y3=normpdf(x,muNormalrare,sNormalrare);
+plot(x,y3);
+[muNormalfrequent,sNormalfrequent]=normfit(plvfrequentNormal);
+x=muNormalfrequent-3*sNormalfrequent:0.01:muNormalfrequent+3*sNormalfrequent;
+y4=normpdf(x,muNormalfrequent,sNormalfrequent);
+plot(x,y4);
+[h1,p1]=ttest2(y1,y2);
+[h2,p2]=ttest2(y3,y4);
+p1
+p2
+
+
+
+%data1=NormalfrequentFz-NormalfrequentCz;
+diff=0;
+for i=1:size(NormalfrequentCz,3)
+h1=hilbert(NormalfrequentCz(1,:,i));
+h2=hilbert(NormalfrequentFz(1,:,i));
+ph1=angle(h1);
+ph2=angle(h2);
+diff=diff+(ph2-ph1);
+end
+data1=diff./size(NormalfrequentCz,3);
+polarhistogram(data1);
+%data2=ADfrequentFz-ADfrequentCz;
+diff2=0;
+for i=1:size(ADfrequentCz,3)
+h1=hilbert(ADfrequentCz(1,:,i));
+h2=hilbert(ADfrequentFz(1,:,i));
+ph1=angle(h1);
+ph2=angle(h2);
+diff2=diff2+(ph2-ph1);
+end
+data2=diff2./size(ADfrequentCz,3);
+polarhistogram(data2);
+meanAD=zeros(1,13);
+meanNormal=zeros(1,15);
+for j=1:13
+epoch=AD(j).epoch;
+% Fz=epoch(2,:,:);
+% Cz=epoch(3,:,:);
+odor=AD(j).odor;
+% B=ones(1,size(Fz,2)).*(~odor);   
+% ADfrequentFz=Fz.*B;
+% ADfrequentCz=Cz.*B;
+ ADfrequentFz=epoch(2,:,odor==0);
+ADfrequentCz=epoch(3,:,odor==0);
+diff=0;
+for i=1:size(ADfrequentCz,3)
+h1=hilbert(ADfrequentCz(1,:,i));
+h2=hilbert(ADfrequentFz(1,:,i));
+ph1=angle(h1);
+ph2=angle(h2);
+diff=diff+(ph2-ph1);
+end
+data1=diff./size(ADfrequentCz,3);
+meanAD(j)=mean(data1);
+end
+x=1:13;
+plot(x,meanAD);
+title("mean among each subject for AD")
+for j=1:15
+epoch=normal(j).epoch;
+% Fz=epoch(2,:,:);
+% Cz=epoch(3,:,:);
+odor=normal(j).odor;
+% B=ones(1,size(Fz,2)).*(~odor);
+% NormalfrequentFz=Fz.*B;
+% NormalfrequentCz=Cz.*B;
+NormalfrequentFz=epoch(2,:,odor==0);
+NormalfrequentCz=epoch(3,:,odor==0);
+diff=0;
+for i=1:size(NormalfrequentCz,3)
+h1=hilbert(NormalfrequentCz(1,:,i));
+h2=hilbert(NormalfrequentFz(1,:,i));
+ph1=angle(h1);
+ph2=angle(h2);
+diff=diff+(ph2-ph1);
+end
+data1=diff./size(NormalfrequentCz,3);
+meanNormal(j)=mean(data1);
+end
+x=1:15;
+plot(x,meanNormal);
+title("mean among each subject for Normal");
+
+
+
+
+freqrange=[35 40];
+plvrareMCI=zeros(1,7);
+plvfrequentMCI=zeros(1,7);
+for j=1:7
+epoch=MCI(j).epoch;
+% Fz=epoch(2,:,:);
+% Cz=epoch(3,:,:);
+odor=MCI(j).odor;
+% A=ones(1,size(Fz,2)).*(odor);
+% B=ones(1,size(Fz,2)).*(~odor);
+% ADrareFz=Fz.*A;
+% ADrareCz=Cz.*A;
+% ADfrequentFz=Fz.*B;
+% ADfrequentCz=Cz.*B;
+MCIrareFz=epoch(2,:,odor==1);
+MCIrareCz=epoch(3,:,odor==1);
+MCIfrequentFz=epoch(2,:,odor==0);
+MCIfrequentCz=epoch(3,:,odor==0);
+plvMCIrareAv=0;
+plvMCIfrequentAv=0;
+for i=1:size(MCIrareCz,3)
+plvMCIrare=PLV(MCIrareCz(1,:,i),MCIrareFz(1,:,i),freqrange,200);
+plvMCIrareAv=plvMCIrareAv+plvMCIrare;
+end
+for i=1:size(MCIfrequentCz,3)
+plvMCIfrequent=PLV(MCIfrequentCz(1,:,i),MCIfrequentFz(1,:,i),freqrange,200);
+plvMCIfrequentAv=plvMCIfrequent+plvMCIfrequentAv;
+end
+plvrareMCI(j)=plvMCIrareAv./size(MCIrareCz,3);
+plvfrequentMCI(j)=plvMCIfrequentAv./size(MCIfrequentCz,3);
+end
+boxplot(plvfrequentMCI);
+title("frequent MCI");
+boxplot(plvrareMCI);
+title("rare MCI");
+
+
+[muMCIrare,sMCIrare]=normfit(plvrareMCI);
+x1=muMCIrare-3*sMCIrare:0.01:muMCIrare+3*sMCIrare;
+y1=normpdf(x1,muMCIrare,sMCIrare);
+plot(x1,y1);
+title("normal fit rare MCI");
+[muMCIfrequent,sMCIfrequent]=normfit(plvfrequentMCI);
+x2=muMCIfrequent-3*sMCIfrequent:0.01:muMCIfrequent+3*sMCIfrequent;
+y2=normpdf(x2,muMCIfrequent,sMCIfrequent);
+plot(x2,y2);
+title("normal fit frequent MCI");
+[hMCI,pMCI]=ttest2(y1,y2);
+pMCI
+
+
+meanMCI=zeros(1,7);
+for j=1:7
+epoch=MCI(j).epoch;
+% Fz=epoch(2,:,:);
+% Cz=epoch(3,:,:);
+odor=MCI(j).odor;
+% B=ones(1,size(Fz,2)).*(~odor);
+% NormalfrequentFz=Fz.*B;
+% NormalfrequentCz=Cz.*B;
+MCIfrequentFz=epoch(2,:,odor==0);
+MCIfrequentCz=epoch(3,:,odor==0);
+diff=0;
+for i=1:size(MCIfrequentCz,3)
+h1=hilbert(MCIfrequentCz(1,:,i));
+h2=hilbert(MCIfrequentFz(1,:,i));
+ph1=angle(h1);
+ph2=angle(h2);
+diff=diff+(ph2-ph1);
+end
+data1=diff./size(MCIfrequentCz,3);
+meanMCI(j)=mean(data1);
+end
+x=1:7;
+plot(x,meanMCI);
+title("mean among each subject for MCI");
+
+diff=0;
+for i=1:size(MCIfrequentCz,3)
+h1=hilbert(MCIfrequentCz(1,:,i));
+h2=hilbert(MCIfrequentFz(1,:,i));
+ph1=angle(h1);
+ph2=angle(h2);
+diff=diff+(ph2-ph1);
+end
+data1=diff./size(MCIfrequentCz,3);
+polarhistogram(data1);
+
+% meanMCI=zeros(1,7);
+% for j=1:7
+% epoch=MCI(j).epoch;
+% % Fz=epoch(2,:,:);
+% % Cz=epoch(3,:,:);
+% odor=MCI(j).odor;
+% % B=ones(1,size(Fz,2)).*(~odor);   
+% % ADfrequentFz=Fz.*B;
+% % ADfrequentCz=Cz.*B;
+% MCIfrequentFz=epoch(2,:,odor==0);
+% MCIfrequentCz=epoch(3,:,odor==0);
+% diff=0;
+% for i=1:size(MCIfrequentCz,3)
+% h1=hilbert(MCIfrequentCz(1,:,i));
+% h2=hilbert(MCIfrequentFz(1,:,i));
+% ph1=angle(h1);
+% ph2=angle(h2);
+% diff=diff+(ph2-ph1);
+% end
+% data1=diff./size(ADfrequentCz,3);
+% meanMCI(j)=mean(data1);
+% end
+% x=1:7;
+% plot(x,meanMCI);
+% title("mean among each subject for MCI");
+
+
+
+function [ plv ] = PLV( sig1,sig2,frqrange,fsamp)
+% Compute the Phase Locking Value between two signals across trials, according to Lachaux, 
+% Rodriguez, Martinerie, and Varela (1999). The PLV value ranges from 0, indicating random 
+% phase differences, to 1 indicating a fixed phase difference. 
+% phase_sig1 and phase_sig2 should be the phase values of the signals in radians, arranged as
+% Samples x Trials. These can bed
+% computed using the Wavelet or Hilbert transform, for example:
+% phase_sig = angle(hilbert(BPS)); 
+% Where BPS is the signal after band-pass filtering around the frequency range of interest. 
+sig_temp1=bandpass(sig1,frqrange,fsamp);
+sig_temp2=bandpass(sig2,frqrange,fsamp);
+analytic_sig1=hilbert(sig_temp1);
+analytic_sig2=hilbert(sig_temp2);
+phase_sig1=angle(analytic_sig1);
+phase_sig2=angle(analytic_sig2);
+[~, Ntrials] = size(phase_sig1);
+% compute PLV
+e = exp(1i*(phase_sig1 - phase_sig2));
+plv = abs(sum(e,2)) / Ntrials;
+end
+
